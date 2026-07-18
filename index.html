@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kallova LLC</title>
+  <meta name="description" content="Kallova LLC — welcome. Get in touch at contact@kallova.com." />
+  <style>
+    :root {
+      --bg: #0e1113;
+      --bg-soft: #15191c;
+      --text: #eceff1;
+      --text-dim: #9aa4ab;
+      --accent: #7fb069;
+      --line: rgba(255, 255, 255, 0.08);
+    }
+    @media (prefers-color-scheme: light) {
+      :root {
+        --bg: #f7f7f5;
+        --bg-soft: #ffffff;
+        --text: #171b1e;
+        --text-dim: #5b6469;
+        --accent: #4a7a38;
+        --line: rgba(0, 0, 0, 0.08);
+      }
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      display: flex;
+      flex-direction: column;
+    }
+    main {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 4rem 1.5rem;
+    }
+    .card { max-width: 34rem; text-align: center; }
+    .mark {
+      display: inline-block;
+      font-size: 0.8rem;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: var(--accent);
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 0.45rem 1.1rem 0.45rem 1.45rem;
+      margin-bottom: 2.25rem;
+    }
+    h1 {
+      font-size: clamp(2.6rem, 8vw, 4rem);
+      font-weight: 700;
+      letter-spacing: 0.06em;
+    }
+    h1 .llc {
+      font-size: 0.35em;
+      font-weight: 500;
+      letter-spacing: 0.3em;
+      color: var(--text-dim);
+      vertical-align: 0.55em;
+      margin-left: 0.5em;
+    }
+    .tagline {
+      margin-top: 1.25rem;
+      font-size: 1.125rem;
+      line-height: 1.6;
+      color: var(--text-dim);
+    }
+    .actions { margin-top: 2.75rem; }
+    .btn {
+      display: inline-block;
+      background: var(--accent);
+      color: var(--bg);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      letter-spacing: 0.02em;
+      padding: 0.85rem 2rem;
+      border-radius: 999px;
+      transition: opacity 0.15s ease;
+    }
+    .btn:hover { opacity: 0.85; }
+    .email {
+      display: block;
+      margin-top: 1rem;
+      font-size: 0.9rem;
+      color: var(--text-dim);
+    }
+    .email a { color: inherit; }
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 0.8rem;
+      color: var(--text-dim);
+      border-top: 1px solid var(--line);
+      background: var(--bg-soft);
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="card">
+      <span class="mark">Welcome</span>
+      <h1>KALLOVA<span class="llc">LLC</span></h1>
+      <p class="tagline">
+        Building simple, useful technology for everyday services.
+        Our full site is on its way — in the meantime, we'd love to hear from you.
+      </p>
+      <div class="actions">
+        <a class="btn" href="mailto:contact@kallova.com">Get in touch</a>
+        <span class="email"><a href="mailto:contact@kallova.com">contact@kallova.com</a></span>
+      </div>
+    </div>
+  </main>
+  <footer>© 2026 Kallova LLC. All rights reserved.</footer>
+</body>
+</html>
