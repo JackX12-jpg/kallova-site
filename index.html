@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Kallova LLC</title>
-  <meta name="description" content="Kallova LLC — welcome. Get in touch at contact@kallova.com." />
+  <meta name="description" content="Kallova LLC builds consumer technology for everyday home services, starting with a lawn-care marketplace that measures your yard, prices the job upfront, and connects you with local pros. Contact: info@kallova.com" />
   <style>
     :root {
       --bg: #0e1113;
@@ -25,23 +25,23 @@
       }
     }
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    html, body { height: 100%; }
+    html { scroll-behavior: smooth; }
     body {
       background: var(--bg);
       color: var(--text);
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       -webkit-font-smoothing: antialiased;
-      display: flex;
-      flex-direction: column;
+      line-height: 1.6;
     }
-    main {
-      flex: 1;
+    .hero {
+      min-height: 82vh;
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 4rem 1.5rem;
+      text-align: center;
+      padding: 5rem 1.5rem 4rem;
     }
-    .card { max-width: 34rem; text-align: center; }
+    .hero-inner { max-width: 38rem; }
     .mark {
       display: inline-block;
       font-size: 0.8rem;
@@ -57,6 +57,7 @@
       font-size: clamp(2.6rem, 8vw, 4rem);
       font-weight: 700;
       letter-spacing: 0.06em;
+      line-height: 1.1;
     }
     h1 .llc {
       font-size: 0.35em;
@@ -68,11 +69,10 @@
     }
     .tagline {
       margin-top: 1.25rem;
-      font-size: 1.125rem;
-      line-height: 1.6;
+      font-size: 1.2rem;
       color: var(--text-dim);
     }
-    .actions { margin-top: 2.75rem; }
+    .actions { margin-top: 2.5rem; }
     .btn {
       display: inline-block;
       background: var(--accent);
@@ -86,16 +86,56 @@
       transition: opacity 0.15s ease;
     }
     .btn:hover { opacity: 0.85; }
-    .email {
-      display: block;
+    section {
+      max-width: 60rem;
+      margin: 0 auto;
+      padding: 4.5rem 1.5rem;
+      border-top: 1px solid var(--line);
+    }
+    h2 {
+      font-size: 0.85rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1.5rem;
+    }
+    .lede {
+      font-size: 1.35rem;
+      line-height: 1.55;
+      max-width: 44rem;
+    }
+    .lede + p {
+      margin-top: 1.25rem;
+      font-size: 1.05rem;
+      color: var(--text-dim);
+      max-width: 44rem;
+    }
+    .cards {
+      margin-top: 3rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+      gap: 1.25rem;
+    }
+    .card {
+      background: var(--bg-soft);
+      border: 1px solid var(--line);
+      border-radius: 1rem;
+      padding: 1.75rem 1.5rem;
+    }
+    .card h3 { font-size: 1.05rem; font-weight: 650; margin-bottom: 0.5rem; }
+    .card p { font-size: 0.95rem; color: var(--text-dim); }
+    .contact { text-align: center; }
+    .contact h2 { margin-bottom: 1rem; }
+    .contact p { color: var(--text-dim); max-width: 34rem; margin: 0 auto 2rem; }
+    .email-line {
       margin-top: 1rem;
-      font-size: 0.9rem;
+      font-size: 0.95rem;
       color: var(--text-dim);
     }
-    .email a { color: inherit; }
+    .email-line a { color: inherit; }
     footer {
       text-align: center;
-      padding: 1.5rem;
+      padding: 2rem 1.5rem;
       font-size: 0.8rem;
       color: var(--text-dim);
       border-top: 1px solid var(--line);
@@ -104,20 +144,52 @@
   </style>
 </head>
 <body>
-  <main>
-    <div class="card">
-      <span class="mark">Welcome</span>
+  <div class="hero">
+    <div class="hero-inner">
+      <span class="mark">Home services, simplified</span>
       <h1>KALLOVA<span class="llc">LLC</span></h1>
-      <p class="tagline">
-        Building simple, useful technology for everyday services.
-        Our full site is on its way — in the meantime, we'd love to hear from you.
-      </p>
+      <p class="tagline">We build consumer technology that takes the friction out of everyday home services.</p>
       <div class="actions">
-        <a class="btn" href="mailto:contact@kallova.com">Get in touch</a>
-        <span class="email"><a href="mailto:contact@kallova.com">contact@kallova.com</a></span>
+        <a class="btn" href="#about">What we do</a>
       </div>
     </div>
-  </main>
+  </div>
+
+  <section id="about">
+    <h2>What we do</h2>
+    <p class="lede">
+      Kallova is a software company focused on home services. Our first product is a
+      lawn-care marketplace that measures a yard from its address alone, prices the
+      job upfront, and connects homeowners with local landscaping professionals.
+    </p>
+    <p>
+      No site visits to get a quote, no phone tag, no guesswork — for homeowners or
+      for the pros doing the work. We're launching first in Massachusetts, with more
+      regions to follow.
+    </p>
+    <div class="cards">
+      <div class="card">
+        <h3>Instant yard measurement</h3>
+        <p>Enter an address and we measure the lawn using aerial imagery and public parcel data — accurate sizing before anyone sets foot on the property.</p>
+      </div>
+      <div class="card">
+        <h3>Upfront, fair pricing</h3>
+        <p>Transparent per-visit pricing based on the actual yard, shown before you book. No estimates, no surprises on the invoice.</p>
+      </div>
+      <div class="card">
+        <h3>Local professionals</h3>
+        <p>Jobs go to vetted landscaping pros nearby, who see the work clearly scoped and get paid promptly when it's done.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <h2>Get in touch</h2>
+    <p>Questions, partnerships, or interested in being one of our first providers? We'd love to hear from you.</p>
+    <a class="btn" href="mailto:info@kallova.com">Email us</a>
+    <p class="email-line"><a href="mailto:info@kallova.com">info@kallova.com</a></p>
+  </section>
+
   <footer>© 2026 Kallova LLC. All rights reserved.</footer>
 </body>
 </html>
